@@ -35,7 +35,7 @@ export function Header() {
         <div className="flex justify-center">
           <Link href="/" className="flex items-center mt-1">
             <img 
-              src="/logo-grupul-humanitas.svg" 
+              src="/humanitas-101-titles-that-made-us-humans/logo-grupul-humanitas.svg"
               alt="Logo Grupul Humanitas" 
               className="h-7 md:h-10 w-auto invert transition-all translate-y-[2px]"
             />

@@ -70,7 +70,7 @@ export function MinimalBookSheet({ books }: BookSheetProps) {
                     {/* Small Thumbnail Cover */}
                     <div className="relative w-8 h-12 flex-shrink-0 overflow-hidden rounded bg-neutral-800">
                         <Image
-                        src={book.cover}
+                        src={`/humanitas-101-titles-that-made-us-humans${book.cover}`}
                         alt={book.title}
                         fill
                         sizes="32px"

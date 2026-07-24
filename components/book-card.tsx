@@ -12,7 +12,7 @@ export function BookCard({ book }: { book: Book }) {
     >
       <div className="relative aspect-[3/4] w-full overflow-hidden rounded-sm bg-secondary shadow-sm ring-1 ring-border transition-shadow duration-300 group-hover:shadow-md">
         <Image
-          src={book.cover || '/placeholder.svg'}
+          src={`/humanitas-101-titles-that-made-us-humans${book.cover}` || '/placeholder.svg'}
           alt={`Cover of ${book.title} by ${book.author}`}
           fill
           sizes="(min-width: 512px) 30vw, (min-width: 640px) 45vw, 90vw"
