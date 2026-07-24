@@ -2,6 +2,7 @@
 const nextConfig = {
   output: 'export',
   basePath: '/humanitas-101-titles-that-made-us-humans',
+  assetPrefix: '/humanitas-101-titles-that-made-us-humans/',
   typescript: {
     ignoreBuildErrors: true,
   },
