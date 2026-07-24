@@ -1,15 +1,4 @@
-export type Book = {
-  id: string
-  title: string
-  author: string
-  year: string
-  category: string
-  buyUrl: string
-  description: string
-  cover: string
-}
-
-export const books: Book[] = [
+[
   {
     "id": "metamorfozele-cetatii",
     "title": "Metamorfozele cetatii",
@@ -611,7 +600,7 @@ export const books: Book[] = [
     "cover": "/covers/revolta-maselor.jpg"
   },
   {
-    "id": "jurnal-1",
+    "id": "jurnal",
     "title": "Jurnal",
     "author": "Lev Tolstoi",
     "year": "2001",
@@ -661,7 +650,7 @@ export const books: Book[] = [
     "cover": "/covers/jurnale-pariziene.jpg"
   },
   {
-    "id": "jurnal-2",
+    "id": "jurnal",
     "title": "Jurnal",
     "author": "Julien Green",
     "year": "2001",

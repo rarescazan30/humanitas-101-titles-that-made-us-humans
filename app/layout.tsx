@@ -1,8 +1,14 @@
 import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
-import { Playfair_Display, Source_Serif_4 } from 'next/font/google'
+import { Playfair_Display, Source_Serif_4, Work_Sans} from 'next/font/google'
 import './globals.css'
 
+
+const workSans = Work_Sans({
+  subsets: ['latin', 'latin-ext'],
+  variable: '--font-work-sans',
+  display: 'swap',
+})
 const playfair = Playfair_Display({
   subsets: ['latin'],
   variable: '--font-serif',
@@ -16,9 +22,9 @@ const sourceSerif = Source_Serif_4({
 })
 
 export const metadata: Metadata = {
-  title: 'The Margin — A Curated Reading List',
+  title: 'Cărțile care ne-au făcut oameni',
   description:
-    'A quiet, curated selection of novels chosen by our editors. An editorial reading list from a high-end publishing house.',
+    'O selecție esențială de cărți, curatoriată de Gabriel Liiceanu. O listă de lectură fundamentală, reunită aici sub egida proiectului „Cărțile care ne-au făcut oameni”.',
   generator: 'v0.app',
   icons: {
     icon: [
@@ -50,7 +56,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${playfair.variable} ${sourceSerif.variable} bg-background`}>
+    <html lang="en" className={`${playfair.variable} ${sourceSerif.variable} ${workSans.variable} bg-background`}>
       <body className="font-sans antialiased">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
