@@ -1,0 +1,6 @@
+:HL["/humanitas-101-titles-that-made-us-humans/_next/static/chunks/0st6dzhc9dxyn.css","style"]
+:HL["/humanitas-101-titles-that-made-us-humans/_next/static/media/2a65768255d6b625-s.p.14by5b4al-y~f.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/humanitas-101-titles-that-made-us-humans/_next/static/media/57dc28f7118abe14-s.p.0~q417~7alp5b.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/humanitas-101-titles-that-made-us-humans/_next/static/media/68d403cf9f2c68c5-s.p.0nhx~dwif.9~q.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/humanitas-101-titles-that-made-us-humans/_next/static/media/7ddd198311ba7843-s.p.11f_0f-25f9yg.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+0:{"tree":{"name":"","param":null,"prefetchHints":16,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":0,"slots":null}}},"staleTime":300,"buildId":"RPgsRsQ4M2NlCZl-qCOSb"}

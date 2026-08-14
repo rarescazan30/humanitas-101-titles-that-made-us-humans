@@ -9,15 +9,15 @@ const titles = JSON.parse(fs.readFileSync('./scripts/sample-titles.json', 'utf8'
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
 async function resolveWorkingUrl(baseSlug) {
-  const candidates = [
-    `https://humanitas.ro/humanitas/carte/${baseSlug}-2025`,
-    `https://humanitas.ro/humanitas/carte/${baseSlug}-2024`,
-    `https://humanitas.ro/humanitas/carte/${baseSlug}-2023`,
-    `https://humanitas.ro/humanitas/carte/${baseSlug}-2022`,
-    `https://humanitas.ro/humanitas/carte/${baseSlug}-2`,
-    `https://humanitas.ro/humanitas/carte/${baseSlug}-1`,
-    `https://humanitas.ro/humanitas/carte/${baseSlug}`
-  ];
+  const sections = ['humanitas', 'humanitas-fiction'];
+  const suffixes = ['-2025', '-2024', '-2023', '-2022', '-2021', '-2020', '-3', '-2', '-1', '-0', ''];
+  const candidates = [];
+
+  for (const section of sections) {
+    for (const s of suffixes) {
+      candidates.push(`https://humanitas.ro/${section}/carte/${baseSlug}${s}`);
+    }
+  }
 
   for (const url of candidates) {
     try {
@@ -29,7 +29,7 @@ async function resolveWorkingUrl(baseSlug) {
       const html = res.data;
 
       if (typeof html === 'string' && html.includes('<body>404</body>')) {
-        await sleep(150); // Tiny pause between checking missing candidates
+        await sleep(100);
         continue;
       }
 
@@ -37,7 +37,7 @@ async function resolveWorkingUrl(baseSlug) {
         return url;
       }
     } catch (err) {
-      await sleep(150);
+      await sleep(100);
     }
   }
 
@@ -131,20 +131,31 @@ async function scrapeBook(item) {
 
   if (!targetUrl) {
     console.log(`⚠️ Direct URL check failed. Searching via Humanitas query...`);
-    const searchUrl = `https://humanitas.ro/cauta/${encodeURIComponent(searchQuery)}`;
+    const searchQueries = author ? [searchQuery, title] : [title];
 
-    try {
-      const { data: searchHtml } = await axios.get(searchUrl, {
-        headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)' }
-      });
-      const $search = cheerio.load(searchHtml);
-      const relativeLink = $search('#search-prods-wrapper .search-prod-entry .book-image a').first().attr('href');
+    for (const q of searchQueries) {
+      const searchUrl = `https://humanitas.ro/cauta/${encodeURIComponent(q)}`;
+      try {
+        const { data: searchHtml } = await axios.get(searchUrl, {
+          headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)' }
+        });
+        const $search = cheerio.load(searchHtml);
+        
+        let relativeLink = null;
+        $search('#search-prods-wrapper .search-prod-entry .book-image a').each((_, el) => {
+          const href = $search(el).attr('href');
+          if (href && (href.includes('/carte/') || href.includes('/humanitas'))) {
+            if (!relativeLink) relativeLink = href;
+          }
+        });
 
-      if (relativeLink) {
-        targetUrl = relativeLink.startsWith('http') ? relativeLink : `https://humanitas.ro${relativeLink}`;
+        if (relativeLink) {
+          targetUrl = relativeLink.startsWith('http') ? relativeLink : `https://humanitas.ro${relativeLink}`;
+          break;
+        }
+      } catch (error) {
+        console.error(`❌ Search page request failed for "${q}":`, error.message);
       }
-    } catch (error) {
-      console.error(`❌ Search page request failed:`, error.message);
     }
   }
 
