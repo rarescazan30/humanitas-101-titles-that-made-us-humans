@@ -1,9 +1,13 @@
-const isProd = process.env.NODE_ENV === 'production';
+const isGitHubPages = process.env.GITHUB_ACTIONS === 'true';
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  basePath: isProd ? '/humanitas-101-titles-that-made-us-humans' : '',
+  ...(isGitHubPages
+    ? {
+        output: 'export',
+        basePath: '/humanitas-101-titles-that-made-us-humans',
+      }
+    : {}),
   typescript: {
     ignoreBuildErrors: true,
   },
