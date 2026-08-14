@@ -1,15 +1,25 @@
-export type Book = {
+export interface Book {
   id: string
   title: string
   author: string
-  year: string
+  year?: string | null
   category: string
-  buyUrl: string
-  description: string
+  buyUrl?: string
+  description?: string
   cover: string
 }
 
 export const books: Book[] = [
+  {
+    "id": "epopeea-lui-ghilgamesh",
+    "category": "Nodurile Civilizației occidentale",
+    "title": "Epopeea lui Ghilgameș",
+    "author": "Anonim",
+    "year": "Secolul XVIII î.Hr.",
+    "buyUrl": "https://www.libris.ro/carte/epopeea-lui-ghilgames-ed-2014/861787",
+    "description": "Cea mai veche operă literară a umanității, epopeea mesopotamiană narează căutarea nemuririi de către regele Ghilgameș din Uruk și prietenia sa legendară cu Enkidu.",
+    "cover": "/covers/epopeea-lui-ghilgamesh.jpg"
+  },
   {
     "id": "metamorfozele-cetatii",
     "title": "Metamorfozele cetatii",
@@ -19,6 +29,36 @@ export const books: Book[] = [
     "buyUrl": "https://humanitas.ro/humanitas/carte/metamorfozele-cetatii",
     "description": "Subtil şi, intelectualmente, sprinten, chibzuit şi descurcăreţ, asemenea miticului Ulise, autorul ştie de unde porneşte (invenţia politicii înaintea cetăţii, cu un război aşa cum îl duc aheii) şi unde...",
     "cover": "/covers/metamorfozele-cetatii.jpg"
+  },
+  {
+    "id": "viata-de-toate-zilele-in-grecia-secolului-lui-pericle",
+    "title": "Viața de toate zilele în Grecia secolului lui Pericle",
+    "author": "Robert Flaceliere",
+    "year": "2011",
+    "category": "Nodurile Civilizației occidentale",
+    "buyUrl": "https://humanitas.ro/humanitas/carte/viata-de-toate-zilele-in-grecia-secolului-lui-pericle",
+    "description": "După aproape o jumătate de secol de la apariţia ei în Franţa, şi după trei decenii de la prima sa ediţie în limba română, cartea elenistului francez Robert Flacelière, membru al Academiei franceze, nu...",
+    "cover": "/covers/viata-de-toate-zilele-in-grecia-secolului-lui-pericle.jpg"
+  },
+  {
+    "id": "civilizatia-romana",
+    "title": "Civilizația romană",
+    "author": "Pierre Grimal",
+    "year": "2022",
+    "category": "Nodurile Civilizației occidentale",
+    "buyUrl": "https://humanitas.ro/humanitas/carte/civilizatia-romana",
+    "description": "Traducere de Wilhelm Tauwinkl Desene de Rareș Ionașcu „Cum a fost oare posibil ca limba și cultura unui mic grup etnic din Latium să devină limba și cultura unui imperiu universal, moștenirea acestuia...",
+    "cover": "/covers/civilizatia-romana.jpg"
+  },
+  {
+    "id": "istoria-declinului-si-a-prabusirii-imperiului-roman",
+    "title": "Istoria declinului și a prăbușirii Imperiului Roman",
+    "author": "Edward Gibbon",
+    "year": "2018",
+    "category": "Nodurile Civilizației occidentale",
+    "buyUrl": "https://humanitas.ro/humanitas/carte/istoria-declinului-si-a-prabusirii-imperiului-roman",
+    "description": "Antologie, traducere și note de Dan Hurmuzescu Introducere și tabel cronologic de Dionisie Constantin Pîrvuloiu Nici acum nu pot uita sau exprima puternicele emoţii care îmi învolburau mintea când am...",
+    "cover": "/covers/istoria-declinului-si-a-prabusirii-imperiului-roman.jpg"
   },
   {
     "id": "amurgul-evului-mediu",
@@ -41,6 +81,16 @@ export const books: Book[] = [
     "cover": "/covers/clinamen-cum-a-inceput-renasterea.jpg"
   },
   {
+    "id": "istoria-renasterii",
+    "category": "Nodurile Civilizației occidentale",
+    "title": "Cultura Renașterii în Italia",
+    "author": "Jacob Burckhardt",
+    "year": "1860",
+    "buyUrl": "https://www.targulcartii.ro/jacob-burckhardt/cultura-renasterii-in-italia?an=1969&editura=Pentru+Literatura&coperta=Brosata+(paperback)&pid=288806",
+    "description": "Studiul monumental care a definit conceptul istoriografic modern de Renaștere și apariția individului liber, a geniului artistic și a conștiinței umaniste.",
+    "cover": "/covers/istoria-renasterii.jpg"
+  },
+  {
     "id": "criza-constiintei-europene",
     "title": "Criza constiintei europene",
     "author": "Paul Hazard",
@@ -49,6 +99,26 @@ export const books: Book[] = [
     "buyUrl": "https://humanitas.ro/humanitas/carte/criza-constiintei-europene",
     "description": "\"Ce este Europa? O gandire vesnic nesatisfacuta. Neinduratoare cu ea insasi, cauta fara ragaz doua lucruri: unul e fericirea, iar celalalt, care-i este si mai indispensabil, si mai drag, adevarul. De...",
     "cover": "/covers/criza-constiintei-europene.jpg"
+  },
+  {
+    "id": "iesirea-din-teroare-termidor-si-revolutia",
+    "title": "Ieșirea din Teroare. Termidor și Revoluția",
+    "author": "Bronislaw Baczko",
+    "year": "1993",
+    "category": "Nodurile Civilizației occidentale",
+    "buyUrl": "https://humanitas.ro/humanitas/carte/iesirea-din-teroare-termidor-si-revolutia",
+    "description": "La 9 termidor Conventia ii scoate in afara legii pe Robespierre, Saint Just si acolitii lor. A doua zi, toti vor fi ghilotinati. Incepe o perioada tulbure marcata de o dilema politica inedita. Cum se...",
+    "cover": "/covers/iesirea-din-teroare-termidor-si-revolutia.jpg"
+  },
+  {
+    "id": "istoria-civilizatiei-in-europa",
+    "title": "Istoria civilizației în Europa",
+    "author": "Francois Guizot",
+    "year": "2000",
+    "category": "Nodurile Civilizației occidentale",
+    "buyUrl": "https://humanitas.ro/humanitas/carte/istoria-civilizatiei-europa",
+    "description": "Cartea omului politic si istoricului francez Francois Guizot este o lucrare clasica ce a marcat profund o intreaga pleiada de mari ganditori de la mijlocul secolului al XIX-lea, intre care Alexis de T...",
+    "cover": "/covers/istoria-civilizatiei-in-europa.jpg"
   },
   {
     "id": "viena-lui-wittgenstein",
@@ -109,6 +179,16 @@ export const books: Book[] = [
     "buyUrl": "https://humanitas.ro/humanitas/carte/o-istorie-a-lumii-moderne-1",
     "description": "Traducere de Luana Schidu „Istoric al ideilor, mentalităţilor şi pasiunilor colective, gînditor conservator mereu iconoclast şi imprevizibil, Paul Johnson oferă în acest volum o perspectivă lucidă asu...",
     "cover": "/covers/o-istorie-a-lumii-moderne.jpg"
+  },
+  {
+    "id": "arhipelagul-gulag",
+    "category": "Nodurile Civilizației occidentale",
+    "title": "Arhipelagul Gulag",
+    "author": "Aleksandr Soljenițîn",
+    "year": "1973",
+    "buyUrl": "https://carturesti.ro/carte/arhipelagul-gulag-volumele-i-iii-62513",
+    "description": "Monumentală frescă istorică și mărturie zguduitoare a sistemului de lagăre de muncă forțată din Uniunea Sovietică, care a dezvăluit lumii întregi ororile totalitarismului.",
+    "cover": "/covers/arhipelagul-gulag.jpg"
   },
   {
     "id": "jurnalul-annei-frank",
@@ -176,8 +256,8 @@ export const books: Book[] = [
     "author": "***",
     "year": "2013",
     "category": "Cărți pentru noptieră",
-    "buyUrl": "https://humanitas.ro/humanitas/carte/cele-mai-frumoase-povestiri-din-biblie",
-    "description": "„În vremurile de azi, o carte ca aceasta e mai mult decît binevenită. Ritmul în care trăim, configuraţia fiecărei zile (din care răgazurile, perioadele de «otium» fertil sunt, practic, evacuate) reduc...",
+    "buyUrl": "https://humanitas.ro/humanitas/carte/cele-mai-frumoase-povestiri-din-biblie-0",
+    "description": "EBOOK – EPUB / PDF „În vremurile de azi, o carte ca aceasta e mai mult decît binevenită. Ritmul în care trăim, configuraţia fiecărei zile (din care răgazurile, perioadele de «otium» fertil sunt, pract...",
     "cover": "/covers/cele-mai-frumoase-povestiri-din-biblie.jpg"
   },
   {
@@ -191,13 +271,33 @@ export const books: Book[] = [
     "cover": "/covers/arcasul-fara-arc.jpg"
   },
   {
+    "id": "tsurezuregusa-insemnari-din-ceasuri-de-zabava",
+    "title": "Tsurezuregusa Însemnări din ceasuri de zăbavă",
+    "author": "Kenko",
+    "year": "2016",
+    "category": "Cărți pentru noptieră",
+    "buyUrl": "https://humanitas.ro/humanitas/carte/tsurezuregusa-insemnari-din-ceasuri-de-zabava",
+    "description": "Scrise aproximativ între 1330 și 1332, cele 243 de scurte eseuri din Tsurezuregusa (Însemnări din ceasuri de zăbavă) ale călugărului budist Kenkō reprezintă una dintre cele mai studiate și admirate lu...",
+    "cover": "/covers/tsurezuregusa-insemnari-din-ceasuri-de-zabava.jpg"
+  },
+  {
+    "id": "cercul-mincinosilor",
+    "title": "Cercul mincinoșilor",
+    "author": "Jean-Claude Carriere",
+    "year": "2024",
+    "category": "Cărți pentru noptieră",
+    "buyUrl": "https://humanitas.ro/humanitas/carte/cercul-mincinosilor-2021",
+    "description": "Traducere de Brîndușa Prelipceanu și Emanoil Marcu Cele mai frumoase poveşti ale omenirii sunt anonime, iar cei mai iscusiţi povestitori sunt cei care inventează lumi şi reinventează lumea. Această mi...",
+    "cover": "/covers/cercul-mincinosilor.jpg"
+  },
+  {
     "id": "regele-si-cadavrul",
     "title": "Regele si cadavrul",
     "author": "Heinrich Zimmer",
-    "year": "1994",
+    "year": "2024",
     "category": "Cărți pentru noptieră",
-    "buyUrl": "https://humanitas.ro/humanitas/carte/regele-si-cadavrul",
-    "description": "Exista un strat de intelepciune primordiala aproape inabusit de viata cotidiana, de evolutiile aplatizante ale progresului uman, de acumularile superficiale de bunuri si putere. Dar palpitul cursului...",
+    "buyUrl": "https://humanitas.ro/humanitas/carte/regele-si-cadavrul-2021",
+    "description": "Cuvânt înainte de Joseph Campbell • Traducere de Sorin Mărculescu „În câte cărți, ca editor, nu am crezut în zadar, nu mi-am pus speranțele, și pe câte nu le‑am făcut să intre în lume cu gândul de a î...",
     "cover": "/covers/regele-si-cadavrul.jpg"
   },
   {
@@ -206,8 +306,8 @@ export const books: Book[] = [
     "author": "Emil Cioran",
     "year": "2016",
     "category": "Cărți pentru noptieră",
-    "buyUrl": "https://humanitas.ro/humanitas/carte/caiete",
-    "description": "„Operă de moralist? Literatură? Filozofie? Poate că cel mai corect ar fi să numim paginile Caietelor lui Cioran jurnalul condiţiei umane. Nimeni n-a vorbit cu atâta sinceritate, cu atâta vervă și har...",
+    "buyUrl": "https://humanitas.ro/humanitas/carte/caiete-0",
+    "description": "EBOOK – EPUB / PDF „Operă de moralist? Literatură? Filozofie? Poate că cel mai corect ar fi să numim paginile Caietelor lui Cioran jurnalul condiţiei umane. Nimeni n-a vorbit cu atâta sinceritate, cu...",
     "cover": "/covers/caiete.jpg"
   },
   {
@@ -232,12 +332,12 @@ export const books: Book[] = [
   },
   {
     "id": "micul-domn-friedemann",
+    "category": "Cele mai frumoase nuvele ale lumii",
     "title": "Micul domn Friedemann",
     "author": "Thomas Mann",
-    "year": "2015",
-    "category": "Cele mai frumoase nuvele ale lumii",
-    "buyUrl": "https://humanitas.ro/humanitas-multimedia/audiobook/micul-domn-friedemann",
-    "description": "„Nu era, oare, viaţa în sine un bun, indiferent dacă e sau nu configurată în aşa fel încât să i se spună «fericită»? Johannes Friedemann simţea acest lucru şi îi era dragă viaţa. Nimeni nu înţelege cu...",
+    "year": "1897",
+    "buyUrl": "https://humanitas.ro/humanitas-fiction/carte/moartea-la-venetia",
+    "description": "Una dintre cele mai emoționante nuvele de tinerețe ale lui Thomas Mann, explorând tragedia unui om vulnerabil a cărui viață ordonată este zdruncinată de o pasiune mistuitoare.",
     "cover": "/covers/micul-domn-friedemann.jpg"
   },
   {
@@ -256,7 +356,7 @@ export const books: Book[] = [
     "author": "Yasushi Inoue",
     "year": "2004",
     "category": "Cele mai frumoase nuvele ale lumii",
-    "buyUrl": "https://humanitas.ro/humanitas/carte/pusca-de-vanatoare",
+    "buyUrl": "https://humanitas.ro/humanitas/carte/pusca-de-vanatoare-0",
     "description": "Cum e posibil ca o pusca de vanatoare dintr-un poem aparut intr-o revista cinegetica sa lege patru destine in trei scrisori? Cum poate sa ucida o pusca pe tragaciul careia nimeni nu apasa? De ce moare...",
     "cover": "/covers/pusca-de-vanatoare.jpg"
   },
@@ -264,10 +364,10 @@ export const books: Book[] = [
     "id": "rashomon",
     "title": "Rashomon",
     "author": "Ryunosuke Akutagawa",
-    "year": "2007",
+    "year": "2012",
     "category": "Cele mai frumoase nuvele ale lumii",
-    "buyUrl": "https://humanitas.ro/humanitas/carte/rashomon",
-    "description": "O noapte cu intamplari sinistre sub vechea poarta Rashomon. O crima relatata de martori care se contrazic intre ei si-si asuma, fiecare pe cont propriu, faradelegea. O vizita care-si afla deznodamantu...",
+    "buyUrl": "https://humanitas.ro/humanitas/carte/rashomon-0",
+    "description": "EBOOK – EPUB / PDF O noapte cu întâmplări sinistre sub vechea poartă Rashomon. O crimă relatată de martori care se contrazic între ei şi-şi asumă, fiecare pe cont propriu, fărădelegea. O vizită care-ş...",
     "cover": "/covers/rashomon.jpg"
   },
   {
@@ -301,6 +401,26 @@ export const books: Book[] = [
     "cover": "/covers/vanturile.jpg"
   },
   {
+    "id": "verdictul",
+    "category": "Cele mai frumoase nuvele ale lumii",
+    "title": "Verdictul și alte povestiri",
+    "author": "Franz Kafka",
+    "year": "1913",
+    "buyUrl": "https://humanitas.ro/humanitas-fiction/carte/metamorfoza",
+    "description": "Nuvelele emblematice ale lui Kafka despre relațiile tensionate tată-fiu, vinovăție existențială, judecată interioară și stranietatea condiției umane moderne.",
+    "cover": "/covers/verdictul.jpg"
+  },
+  {
+    "id": "un-domn-foarte-batran-cu-niste-aripi-enorme",
+    "category": "Cele mai frumoase nuvele ale lumii",
+    "title": "Un domn foarte bătrân cu niște aripi enorme",
+    "author": "Gabriel García Márquez",
+    "year": "1955",
+    "buyUrl": "https://poezie.ro/clasici/gabriel-garcia-marquez/proza/un-domn-foarte-batran-cu-niste-aripi-enorme-2",
+    "description": "O bijuterie a realismului magic în care apariția unui înger căzut într-o curte săracă devine prilej pentru revelarea naturii umane între curiozitate, cruzime și miracol.",
+    "cover": "/covers/un-domn-foarte-batran-cu-niste-aripi-enorme.jpg"
+  },
+  {
     "id": "povestiri-orientale",
     "title": "Povestiri orientale",
     "author": "Marguerite Yourcenar",
@@ -309,6 +429,26 @@ export const books: Book[] = [
     "buyUrl": "https://humanitas.ro/humanitas/carte/povestiri-orientale-1",
     "description": "Toti suntem mai multe lucruri deodata, crampeie, umbre, naluci, ii spune un intelept unei zeite nefericite, intr-una dintre povestirile acestei carti. Suferim si simtim placere, suntem partasi la pove...",
     "cover": "/covers/povestiri-orientale.jpg"
+  },
+  {
+    "id": "tibia-si-peroneul",
+    "category": "Cele mai frumoase nuvele ale lumii",
+    "title": "Tibia și peroneul",
+    "author": "Adriana Bittel",
+    "year": "1993",
+    "buyUrl": "https://humanitas.ro/humanitas/carte/povesti-de-dragoste-la-prima-vedere-2024",
+    "description": "Una dintre cele mai rafinate și apreciate proze scurte românești postbelice, o meditație plină de finețe, nostalgie și umor discret asupra fragilității umane.",
+    "cover": "/covers/tibia-si-peroneul.jpg"
+  },
+  {
+    "id": "mantaua",
+    "title": "Mantaua",
+    "author": "Nikolai Gogol",
+    "year": "2012",
+    "category": "Cele mai frumoase nuvele ale lumii",
+    "buyUrl": "https://humanitas.ro/humanitas-multimedia/audiobook/mantaua-0",
+    "description": "„Noi toţi ne tragem din Mantaua lui Gogol.\"F.M. Dostoievski „Se deprinse să nu mai mănânce nimic seara, avea în schimb îmbelşugată hrană spirituală gândindu-se necontenit la viitoarea manta. Şi se păr...",
+    "cover": "/covers/mantaua.jpg"
   },
   {
     "id": "ruletistul",
@@ -324,11 +464,61 @@ export const books: Book[] = [
     "id": "nostalgia",
     "title": "Nostalgia",
     "author": "Mircea Cartarescu",
-    "year": "2004",
+    "year": "2025",
     "category": "Cele mai frumoase nuvele ale lumii",
-    "buyUrl": "https://humanitas.ro/humanitas/carte/nostalgia-2",
-    "description": "Oborul era un loc fermecator. Mi-l amintesc si azi cu precizie, il vad pur si simplu in fata ochilor. O intersectie simpla, nu foarte larga, dar cu un aer balcanic, negustoresc, cum nu mai gasesti azi...",
+    "buyUrl": "https://humanitas.ro/humanitas/carte/nostalgia-2021",
+    "description": "„N-am mai scris niciodată povestiri asemenea celor din Nostalgia, căci ele nu pot fi pastişate, continuate sau dezvoltate. După Arhitectul m-am oprit pentru că nu mai era nimic de spus. Nici n-am mai...",
     "cover": "/covers/nostalgia.jpg"
+  },
+  {
+    "id": "lupul-de-stepa",
+    "category": "Cele mai frumoase nuvele ale lumii",
+    "title": "Lupul de stepă",
+    "author": "Hermann Hesse",
+    "year": "1927",
+    "buyUrl": "https://carturesti.ro/carte/lupul-de-stepa-443505",
+    "description": "Romanul capodoperă al lui Hermann Hesse, o explorare profundă a dualității ființei umane sfâșiate între spiritualitate și instinct, între convenția burgheză și libertatea absolută.",
+    "cover": "/covers/lupul-de-stepa.jpg"
+  },
+  {
+    "id": "doamna-cu-catelul",
+    "category": "Cele mai frumoase nuvele ale lumii",
+    "title": "Doamna cu cățelul și alte povestiri",
+    "author": "Anton Cehov",
+    "year": "1899",
+    "buyUrl": "https://humanitas.ro/humanitas-fiction/carte/dragostea",
+    "description": "Una dintre cele mai celebre nuvele de dragoste din literatura universală, o poveste de o copleșitoare delicatețe psihologică despre o iubire târzie și imposibilă.",
+    "cover": "/covers/doamna-cu-catelul.jpg"
+  },
+  {
+    "id": "momente-si-schite",
+    "category": "Cele mai frumoase nuvele ale lumii",
+    "title": "Momente și schițe",
+    "author": "I.L. Caragiale",
+    "year": "1901",
+    "buyUrl": "https://carturesti.ro/carte/momente-si-schite-4828182772",
+    "description": "Radiografia genială a societății românești, a moravurilor, demagogiei și limbajului vremii, realizată cu un umor satiric inegalabil și o luciditate perenă.",
+    "cover": "/covers/momente-si-schite.jpg"
+  },
+  {
+    "id": "trupul-sufletului",
+    "title": "Trupul sufletului",
+    "author": "Ludmila Ulitskaia",
+    "year": "2025",
+    "category": "Cele mai frumoase nuvele ale lumii",
+    "buyUrl": "https://humanitas.ro/humanitas-fiction/carte/trupul-sufletului",
+    "description": "Traducere și note de Luana Schidu „Despre trup știm mult mai multe decât despre suflet. Nimeni nu poate desena o hartă a sufletului. Doar zona de hotar poate fi uneori sesizată. Acolo, pe măsură ce te...",
+    "cover": "/covers/trupul-sufletului.jpg"
+  },
+  {
+    "id": "despre-libertate-la-antici-si-moderni",
+    "category": "Mari cărți / eseuri",
+    "title": "Despre libertate la antici și moderni",
+    "author": "Benjamin Constant",
+    "year": "1819",
+    "buyUrl": "https://www.libris.ro/carte/despre-libertate-la-antici-si-la-moderni-benjamin-constant/862875?srsltid=AfmBOoqOB3fZo9t4Fs_Z9MWFR6wd7ZmsKhrdY3YK0JoDTG_7TY7heFhf",
+    "description": "Discursul clasic al liberalismului politic care compară libertatea civică directă a antichității cu libertatea individuală și protecția drepturilor private din epoca modernă.",
+    "cover": "/covers/despre-libertate-la-antici-si-moderni.jpg"
   },
   {
     "id": "despre-democratie-in-america",
@@ -346,9 +536,29 @@ export const books: Book[] = [
     "author": "John Stuart Mill",
     "year": "2014",
     "category": "Mari cărți / eseuri",
-    "buyUrl": "https://humanitas.ro/humanitas/carte/despre-libertate-2",
-    "description": "„Mill reprezintă în lumea anglo-americană ceea ce este Nietzsche pentru tradiţia continental-europeană: apogeul «modernităţii». Nu este de mirare că eseul Despre libertate e atât de relevant, atât de...",
+    "buyUrl": "https://humanitas.ro/humanitas/carte/despre-libertate-3",
+    "description": "EBOOK GRATUIT / PDF > DESCARCĂ „Mill reprezintă în lumea anglo-americană ceea ce este Nietzsche pentru tradiţia continental-europeană: apogeul «modernităţii». Nu este de mirare că eseul Despre liberta...",
     "cover": "/covers/despre-libertate.jpg"
+  },
+  {
+    "id": "interpretarea-viselor",
+    "category": "Mari cărți / eseuri",
+    "title": "Interpretarea viselor",
+    "author": "Sigmund Freud",
+    "year": "1899",
+    "buyUrl": "https://www.edituratrei.ro/carte/interpretarea-viselor-opere-esentiale-vol-2/11756/",
+    "description": "Lucrarea fundamentală care a întemeiat psihanaliza, stabilind că visele reprezintă calea regală către inconștient și împlinirea deghizată a unor dorințe refulate.",
+    "cover": "/covers/interpretarea-viselor.jpg"
+  },
+  {
+    "id": "psihologia-vietii-cotidiene",
+    "category": "Mari cărți / eseuri",
+    "title": "Psihopatologia vieții cotidiene",
+    "author": "Sigmund Freud",
+    "year": "1901",
+    "buyUrl": "https://www.edituratrei.ro/carte/psihopatologia-vietii-cotidiene-despre-uitare-greseli-de-vorbire-superstitie-si-eroare/11248/",
+    "description": "Studiul clasic al lui Freud despre actele ratate, lapsusuri, uitări de nume și gesturi involuntare, demonstrând prezența activă a inconștientului în fiecare moment al vieții zilnice.",
+    "cover": "/covers/psihologia-vietii-cotidiene.jpg"
   },
   {
     "id": "conditia-umana",
@@ -359,6 +569,16 @@ export const books: Book[] = [
     "buyUrl": "https://humanitas.ro/humanitas/carte/conditia-umana",
     "description": "Ediția a doua, cu un nou cuvânt înainte de Danielle Allen și o introducere de Margaret Canovan Traducere de Georgeta-Anca Ionescu Condiția umană este una dintre cele mai profunde și mai vizionare refl...",
     "cover": "/covers/conditia-umana.jpg"
+  },
+  {
+    "id": "cinci-eseuri-despre-libertate",
+    "title": "Cinci eseuri despre libertate",
+    "author": "Isaiah Berlin",
+    "year": "2010",
+    "category": "Mari cărți / eseuri",
+    "buyUrl": "https://humanitas.ro/humanitas/carte/cinci-eseuri-despre-libertate-şi-alte-scrieri",
+    "description": "Opera lui Isaiah Berlin, de o fascinantă polifonie, simbolizează un constant efort de a redefini liberalismul în epoca hybrisului ideologic al tiraniilor totalitare (nazismul şi comunismul), cărora le...",
+    "cover": "/covers/cinci-eseuri-despre-libertate.jpg"
   },
   {
     "id": "lemnul-stramb-al-omenirii",
@@ -399,6 +619,16 @@ export const books: Book[] = [
     "buyUrl": "https://humanitas.ro/humanitas/carte/o-filozofie-politica-pentru-cetatean",
     "description": "Cunoscut publicului din Romania prin lucrari precum Istoria intelectuala a liberalismului sau Cetatea omului, Pierre Manent ne ofera acum o familiarizare cu marile teme ale filozofiei politice contemp...",
     "cover": "/covers/o-filozofie-politica-pentru-cetatean.jpg"
+  },
+  {
+    "id": "cele-opt-pacate-capitale-ale-omenirii-civilizate",
+    "title": "Cele opt păcate capitale ale omenirii civilizate",
+    "author": "Konrad Lorenz",
+    "year": "2017",
+    "category": "Mari cărți / eseuri",
+    "buyUrl": "https://humanitas.ro/humanitas/carte/cele-opt-pacate-capitale-ale-omenirii-civilizate-3",
+    "description": "Omenirea, privită ca specie biologică, pare să-și fi pierdut firescul instinct de conservare. Un rău cu mai multe chipuri amenință dezvoltarea noastră și, în același timp, e tocmai rezultatul acestei...",
+    "cover": "/covers/cele-opt-pacate-capitale-ale-omenirii-civilizate.jpg"
   },
   {
     "id": "intelectualii",
@@ -444,10 +674,10 @@ export const books: Book[] = [
     "id": "in-castelul-lui-barba-albastra",
     "title": "In castelul lui Barba Albastra",
     "author": "George Steiner",
-    "year": "2013",
+    "year": "2014",
     "category": "Mari cărți / eseuri",
-    "buyUrl": "https://humanitas.ro/humanitas/carte/in-castelul-lui-barba-albastra",
-    "description": "„Multă vreme am crezut că progresul moralei însoţeşte dezvoltarea culturii. Nazismul, arată George Steiner, a pulverizat această iluzie. Buchenwald se află la doar câţiva kilometri de Weimar. Mult tim...",
+    "buyUrl": "https://humanitas.ro/humanitas/carte/in-castelul-lui-barba-albastra-0",
+    "description": "EBOOK – EPUB / PDF „Multă vreme am crezut că progresul moralei însoţeşte dezvoltarea culturii. Nazismul, arată George Steiner, a pulverizat această iluzie. Buchenwald se află la doar câţiva kilometri...",
     "cover": "/covers/in-castelul-lui-barba-albastra.jpg"
   },
   {
@@ -459,6 +689,16 @@ export const books: Book[] = [
     "buyUrl": "https://humanitas.ro/humanitas/carte/adevarul-minciunilor",
     "description": "Viata este una si nu are limite. Citirea romanelor sparge acest tipar si ceea ce se dovedise unic se transforma in multe, in nenumarate vieti. Fiindca asta este marea putere a literaturii, iar volumul...",
     "cover": "/covers/adevarul-minciunilor.jpg"
+  },
+  {
+    "id": "cortina",
+    "title": "Cortina",
+    "author": "Milan Kundera",
+    "year": "2023",
+    "category": "Mari cărți / eseuri",
+    "buyUrl": "https://humanitas.ro/humanitas-fiction/carte/cortina-2023",
+    "description": "Traducere și note de Vlad Russo „O cortină magică, ţesută din legende, atârna între noi şi lume. Cervantes l-a trimis pe don Quijote în peregrinare şi a sfâşiat cortina. Lumea i s-a arătat cavalerului...",
+    "cover": "/covers/cortina.jpg"
   },
   {
     "id": "arta-romanului",
@@ -474,11 +714,21 @@ export const books: Book[] = [
     "id": "sensul-existentei-umane",
     "title": "Sensul existentei umane",
     "author": "Edward O Wilson",
-    "year": "2017",
+    "year": "2018",
     "category": "Mari cărți / eseuri",
-    "buyUrl": "https://humanitas.ro/humanitas/carte/sensul-existentei-umane",
-    "description": "Traducere de Elena Drăgușin-Richard Explorator neobosit al lumii vii, creator al unor noi discipline şi al unor concepte fundamentale în ştiinţele biologice, Edward O. Wilson îşi pune vastele cunoştin...",
+    "buyUrl": "https://humanitas.ro/humanitas/carte/sensul-existentei-umane-0",
+    "description": "EBOOK – EPUB / PDF Traducere de Elena Drăgușin-Richard Explorator neobosit al lumii vii, creator al unor noi discipline şi al unor concepte fundamentale în ştiinţele biologice, Edward O. Wilson îşi pu...",
     "cover": "/covers/sensul-existentei-umane.jpg"
+  },
+  {
+    "id": "luminile-si-umbrele-sufletului",
+    "title": "Luminile și umbrele sufletului",
+    "author": "Petru Cretia",
+    "year": "2023",
+    "category": "Mari cărți / eseuri",
+    "buyUrl": "https://humanitas.ro/humanitas/carte/luminile-si-umbrele-sufletului-2023",
+    "description": "„Cartea aceasta nu vrea să fie altceva decât o călăuză către adevărul despre noi înşine, pe un drum la fel de greu de desluşit ca acela din Călăuza lui Tarkovski. Dar nu de negăsit. Omul este o fiinţă...",
+    "cover": "/covers/luminile-si-umbrele-sufletului.jpg"
   },
   {
     "id": "ahile-ariel",
@@ -489,6 +739,26 @@ export const books: Book[] = [
     "buyUrl": "https://humanitas.ro/humanitas/carte/ahile-ariel-2023",
     "description": "Prefață de Gabriel Liiceanu „Putea simți orice și putea gândi orice. Știa tot, citise tot. În greacă, latină, engleză, franceză, italiană. Când scria despre contingență, despre libertate sau despre et...",
     "cover": "/covers/ahile-ariel.jpg"
+  },
+  {
+    "id": "cuvant-impreuna-despre-rostirea-romaneasca",
+    "title": "Cuvânt împreună despre rostirea românească",
+    "author": "Constantin Noica",
+    "year": "2021",
+    "category": "Mari cărți / eseuri",
+    "buyUrl": "https://humanitas.ro/humanitas/carte/cuvant-impreuna-despre-rostirea-romaneasca-2021",
+    "description": "Ediție îngrijită şi cuvânt înainte de Grigore Vida „Numai în cuvintele limbii tale se întâmplă să-ţi amintești de lucruri pe care nu le-ai învăţat niciodată. Căci orice cuvânt este o uitare și în apro...",
+    "cover": "/covers/cuvant-impreuna-despre-rostirea-romaneasca.jpg"
+  },
+  {
+    "id": "vietile-si-doctrinele-filozofilor",
+    "category": "Sinteze filozofice",
+    "title": "Despre viețile și doctrinele filosofilor",
+    "author": "Diogene Laerțios",
+    "year": "Secolul III d.Hr.",
+    "buyUrl": "https://polirom.ro/img/cms/Biblioteca/Despre%20vietile%20si%20doctrinele.pdf",
+    "description": "Sursa primară inestimabilă pentru cunoașterea filosofiei grecești antice, conținând biografiile, anecdotele și doctrinele marilor gânditori de la presocratici până la epicurieni.",
+    "cover": "/covers/vietile-si-doctrinele-filozofilor.jpg"
   },
   {
     "id": "mirarea-filozofica",
@@ -504,10 +774,10 @@ export const books: Book[] = [
     "id": "pe-scara-din-dos-a-filozofiei",
     "title": "Pe scara din dos a filozofiei",
     "author": "Wilhelm Weischedel",
-    "year": "1999",
+    "year": "2012",
     "category": "Sinteze filozofice",
-    "buyUrl": "https://humanitas.ro/humanitas/carte/pe-scara-din-dos-a-filozofiei",
-    "description": "Potrivit opiniei comune, daca vrei sa cobori statura unei personalitati culturale e de ajuns sa spui ca a avut o banala viata omeneasca: aceleasi necazuri, aceleasi slabiciuni, aceeasi moarte ca noi t...",
+    "buyUrl": "https://humanitas.ro/humanitas/carte/pe-scara-din-dos-a-filozofiei-0",
+    "description": "Potrivit opiniei comune, dacă vrei să cobori statura unei personalităţi culturale, e de ajuns să spui că a dus o banală viaţă omenească: a avut aceleaşi necazuri, aceleaşi slăbiciuni, aceeaşi moarte c...",
     "cover": "/covers/pe-scara-din-dos-a-filozofiei.jpg"
   },
   {
@@ -531,12 +801,62 @@ export const books: Book[] = [
     "cover": "/covers/fragmentele-presocraticilor.jpg"
   },
   {
+    "id": "dialoguri",
+    "category": "Niște filozofi lizibili",
+    "title": "Dialoguri socratice (Apărarea lui Socrate. Criton)",
+    "author": "Platon",
+    "year": "Secolul IV î.Hr.",
+    "buyUrl": "https://humanitas.ro/humanitas/carte/dialoguri-socratice-0",
+    "description": "Textele fondatoare ale gândirii occidentale despre procesul, condamnarea și demnitatea exemplară a lui Socrate în fața legii și a morții.",
+    "cover": "/covers/dialoguri.jpg"
+  },
+  {
+    "id": "banchetul-sau-despre-iubire",
+    "title": "Banchetul sau Despre iubire",
+    "author": "Platon",
+    "year": "2017",
+    "category": "Niște filozofi lizibili",
+    "buyUrl": "https://humanitas.ro/humanitas/carte/banchetul-sau-despre-iubire-2",
+    "description": "Traducere, studiu introductiv și note de Petru Creția „Cititorul are aici, în românește, o scriere străveche și, prin veacuri, ilustră: Banchetul lui Platon. Tot ce s-a spus despre iubire de la Banche...",
+    "cover": "/covers/banchetul-sau-despre-iubire.jpg"
+  },
+  {
+    "id": "manualul",
+    "category": "Niște filozofi lizibili",
+    "title": "Manualul (Encheiridion)",
+    "author": "Epictet",
+    "year": "Secolul II d.Hr.",
+    "buyUrl": "https://www.edituraseneca.ro/carti/epictet-manualul-editie-speciala",
+    "description": "Ghidul esențial al stoicismului practic despre discernământul între lucrurile care depind de noi și cele care nu depind de noi, cheia seninătății și a libertății sufletești.",
+    "cover": "/covers/manualul.jpg"
+  },
+  {
+    "id": "ganduri-catre-sine-insusi",
+    "title": "Gânduri către sine însuși",
+    "author": "Marc Aureliu",
+    "year": "2025",
+    "category": "Niște filozofi lizibili",
+    "buyUrl": "https://humanitas.ro/humanitas/carte/ganduri-catre-sine-insusi-2020",
+    "description": "Traducere din greaca veche, note și indice de Cristian Bejan „O carte de căpătâi a civilizaţiei europene.“ — ANDREI PLEŞU „Cu ani în urmă am cumpărat o ediţie veche din Marc Aureliu care purta următoa...",
+    "cover": "/covers/ganduri-catre-sine-insusi.jpg"
+  },
+  {
+    "id": "scrisori-catre-lucilius",
+    "category": "Niște filozofi lizibili",
+    "title": "Scrisori către Lucilius",
+    "author": "Seneca",
+    "year": "65 d.Hr.",
+    "buyUrl": "https://humanitas.ro/humanitas/carte/scrisori-catre-luciliu",
+    "description": "Capodopera eticii stoice antice, o culegere de sfaturi înțelepte și reflecții practice despre virtute, timp, prietenie, stăpânirea de sine și acceptarea serenă a destinului.",
+    "cover": "/covers/scrisori-catre-lucilius.jpg"
+  },
+  {
     "id": "eseuri",
     "title": "Eseuri",
     "author": "Montaigne",
-    "year": "2020",
+    "year": "2021",
     "category": "Niște filozofi lizibili",
-    "buyUrl": "https://humanitas.ro/humanitas/carte/eseuri",
+    "buyUrl": "https://humanitas.ro/humanitas/carte/eseuri-2021",
     "description": "Traducere din franceză, cronologie şi note de Vlad Russo Cu o prefaţă de Michel Onfray La 50 de ani de la prima publicare integrală a Eseurilor lui Montaigne în limba română, Editura Humanitas oferă c...",
     "cover": "/covers/eseuri.jpg"
   },
@@ -551,6 +871,16 @@ export const books: Book[] = [
     "cover": "/covers/religia-in-limitele-ratiunii-pure.jpg"
   },
   {
+    "id": "lumea-ca-vointa-si-reprezentare",
+    "title": "Lumea ca voință și reprezentare",
+    "author": "Arthur Schopenhauer",
+    "year": "2012",
+    "category": "Niște filozofi lizibili",
+    "buyUrl": "https://humanitas.ro/humanitas/carte/lumea-ca-voinţă-şi-reprezentare-vol-i-şi-ii",
+    "description": "EBOOK – EPUB / PDF „Viaţa este o afacere care nu-şi acoperă costurile.\" (Arthur SCHOPENHAUER) „Dacă ceea ce spune Schopenhauer nu va fi niciodată uitat, asta ţine probabil de faptul că ceea ce el spun...",
+    "cover": "/covers/lumea-ca-vointa-si-reprezentare.jpg"
+  },
+  {
     "id": "parerga-si-paralipomena",
     "title": "Parerga si paralipomena",
     "author": "Arthur Schopenhauer",
@@ -559,6 +889,16 @@ export const books: Book[] = [
     "buyUrl": "https://humanitas.ro/humanitas/carte/parerga-si-paralipomena-2",
     "description": "Traducere și note de Vladimir Lazurca Cele trei eseuri cuprinse în acest al doilea volum din Parerga et paralipomena (1851) – culegere târzie, apărută la 33 de ani de la publicarea primului volum din...",
     "cover": "/covers/parerga-si-paralipomena.jpg"
+  },
+  {
+    "id": "schopenhauer-si-anii-salbatici-ai-filosofiei",
+    "category": "Niște filozofi lizibili",
+    "title": "Schopenhauer și anii sălbatici ai filosofiei",
+    "author": "Rüdiger Safranski",
+    "year": "1998",
+    "buyUrl": "https://humanitas.ro/humanitas/carte/schopenhauer-si-anii-salbatici-ai-filozofiei",
+    "description": "O captivantă biografie intelectuală care reconstituie epoca marilor dispute ale idealismului german și nașterea pesimismului metafizic schopenhauerian.",
+    "cover": "/covers/schopenhauer-si-anii-salbatici-ai-filozofiei.jpg"
   },
   {
     "id": "stiinta-voioasa",
@@ -576,8 +916,8 @@ export const books: Book[] = [
     "author": "Friedrich Nietzsche",
     "year": "2013",
     "category": "Niște filozofi lizibili",
-    "buyUrl": "https://humanitas.ro/humanitas/carte/ecce-homo",
-    "description": "„Îmi cunosc soarta. Cândva se va lega de numele meu amintirea a ceva monstruos – a unei crize cum nu a mai existat pe pământ, a celei mai profunde ciocniri de conştiinţe, a unei decizii conjurate împo...",
+    "buyUrl": "https://humanitas.ro/humanitas/carte/ecce-homo-0",
+    "description": "EBOOK GRATUIT / PDF > DESCARCĂ „Îmi cunosc soarta. Cândva se va lega de numele meu amintirea a ceva monstruos – a unei crize cum nu a mai existat pe pământ, a celei mai profunde ciocniri de conştiinţe...",
     "cover": "/covers/ecce-homo.jpg"
   },
   {
@@ -591,14 +931,14 @@ export const books: Book[] = [
     "cover": "/covers/genealogia-moralei.jpg"
   },
   {
-    "id": "jurnal",
+    "id": "jurnal-soren-kierkegaard",
     "title": "Jurnal",
-    "author": "Soren Kierkegaard",
-    "year": "2001",
+    "author": "Søren Kierkegaard",
+    "year": "1834–1855",
     "category": "Niște filozofi lizibili",
-    "buyUrl": "https://humanitas.ro/humanitas/carte/jurnal",
-    "description": "Ceva ma trage, aproape zilnic acum, spre caietu-asta ce se-apropie de obstescul sfarsit. Stiu si ce ma face sa deschid mecanic, la ora fixa, paginile astea crosetate atat de egal: iresponsabilitatea....",
-    "cover": "/covers/jurnal.jpg"
+    "buyUrl": "https://humanitas.ro/autori/søren-kierkegaard",
+    "description": "Însemnările intime și reflecțiile filosofice ale lui Søren Kierkegaard despre credință, angoasă, relația cu Regine Olsen și paradoxul existenței umane în fața lui Dumnezeu.",
+    "cover": "/covers/jurnal-soren-kierkegaard.jpg"
   },
   {
     "id": "revolta-maselor",
@@ -611,23 +951,23 @@ export const books: Book[] = [
     "cover": "/covers/revolta-maselor.jpg"
   },
   {
-    "id": "jurnal-1",
+    "id": "jurnal-lev-tolstoi",
     "title": "Jurnal",
     "author": "Lev Tolstoi",
-    "year": "2001",
+    "year": "1847–1910",
     "category": "Jurnale, memorii",
-    "buyUrl": "https://humanitas.ro/humanitas/carte/jurnal",
-    "description": "Ceva ma trage, aproape zilnic acum, spre caietu-asta ce se-apropie de obstescul sfarsit. Stiu si ce ma face sa deschid mecanic, la ora fixa, paginile astea crosetate atat de egal: iresponsabilitatea....",
-    "cover": "/covers/jurnal.jpg"
+    "buyUrl": "https://carturesti.ro/carte/jurnal-566840111",
+    "description": "Mărturia de o sinceritate necruțătoare a lui Lev Tolstoi, întinsă pe mai bine de șase decenii, consemnând luptele sale morale, căutarea perfecțiunii spirituale și frământările de creație.",
+    "cover": "/covers/jurnal-lev-tolstoi.jpg"
   },
   {
     "id": "de-profundis",
     "title": "De profundis",
     "author": "Oscar Wilde",
-    "year": "2014",
+    "year": "2021",
     "category": "Jurnale, memorii",
-    "buyUrl": "https://humanitas.ro/humanitas/carte/de-profundis",
-    "description": "Scrisă în închisoare, De profundis e o epistolă către lordul Alfred Douglas, prietenul şi iubitul lui Oscar Wilde timp de trei ani. Legătura lor, condamnată de morala şi legile vremii, îl adusese pe a...",
+    "buyUrl": "https://humanitas.ro/humanitas/carte/de-profundis-2021",
+    "description": "Traducere și note de Luana Schidu „Această carte e unică prin tonul ei seducător, plin de durere și de pasiune. Are o expresivitate încărcată de înțelesuri și o anume stringență, ceea ce o face una di...",
     "cover": "/covers/de-profundis.jpg"
   },
   {
@@ -644,10 +984,10 @@ export const books: Book[] = [
     "id": "amintiri-vise-reflectii",
     "title": "Amintiri vise reflectii",
     "author": "CG Jung",
-    "year": "2010",
+    "year": "2015",
     "category": "Jurnale, memorii",
-    "buyUrl": "https://humanitas.ro/humanitas/carte/amintiri-vise-reflectii-2",
-    "description": "Cartea autobiografica a lui Jung – una dintre cele mai tulburătoare piese memorialistice ale secolului XX – este săracă în fapte de viaţă exterioară: schiţa copilăriei într-o familie de pastori, o tre...",
+    "buyUrl": "https://humanitas.ro/humanitas/carte/amintiri-vise-reflectii-3",
+    "description": "EBOOK > epub / pdf Cartea autobiografica a lui Jung – una dintre cele mai tulburătoare piese memorialistice ale secolului XX – este săracă în fapte de viaţă exterioară: schiţa copilăriei într-o famili...",
     "cover": "/covers/amintiri-vise-reflectii.jpg"
   },
   {
@@ -656,19 +996,39 @@ export const books: Book[] = [
     "author": "Ernst Junger",
     "year": "1997",
     "category": "Jurnale, memorii",
-    "buyUrl": "https://humanitas.ro/humanitas/carte/jurnale-pariziene",
+    "buyUrl": "https://humanitas.ro/humanitas/carte/jurnale-pariziene-si-insemnari-din-caucaz",
     "description": "Dincolo de calitatea lor de martor al unei istorii „incarcate“, prin efecte azi inca vii, ca si dincolo de constructia lor literara eminenta, insemnarile de fata raman importante si cu deosebire atasa...",
     "cover": "/covers/jurnale-pariziene.jpg"
   },
   {
-    "id": "jurnal-2",
+    "id": "jurnalul-unei-epoci",
+    "title": "Jurnalul unei epoci",
+    "author": "Denis de Rougemont",
+    "year": "2018",
+    "category": "Jurnale, memorii",
+    "buyUrl": "https://humanitas.ro/humanitas/carte/jurnalul-unei-epoci-1935–1936-0",
+    "description": "EBOOK > epub / pdf Traducere de Emanoil Marcu și Vlad Russo În 1935-1936, Denis de Rougemont acceptă un post de lector de literatură franceză la Frankfurt, nu în ultimul rând din dorința de a fi marto...",
+    "cover": "/covers/jurnalul-unei-epoci.jpg"
+  },
+  {
+    "id": "jurnal-julien-green",
     "title": "Jurnal",
     "author": "Julien Green",
-    "year": "2001",
+    "year": "1982",
     "category": "Jurnale, memorii",
-    "buyUrl": "https://humanitas.ro/humanitas/carte/jurnal",
-    "description": "Ceva ma trage, aproape zilnic acum, spre caietu-asta ce se-apropie de obstescul sfarsit. Stiu si ce ma face sa deschid mecanic, la ora fixa, paginile astea crosetate atat de egal: iresponsabilitatea....",
-    "cover": "/covers/jurnal.jpg"
+    "buyUrl": "https://humanitas.ro/humanitas/carte/placerea-de-a-te-povesti-tie-insuti-pagini-de-jurnal",
+    "description": "Unul dintre marile jurnale ale secolului XX, consemnând viața literară pariziană, credința catolică, marile frământări interioare și meditațiile profunde asupra artei și morții.",
+    "cover": "/covers/jurnal-julien-green.jpg"
+  },
+  {
+    "id": "jurnalul-fericirii",
+    "category": "Jurnale, memorii",
+    "title": "Jurnalul fericirii",
+    "author": "N. Steinhardt",
+    "year": "1991",
+    "buyUrl": "https://polirom.ro/seria-de-autor-n-steinhardt/3025-jurnalul-fericirii.html",
+    "description": "Capodoperă a literaturii carcerale și a mărturisirii creștine, testamentul spiritual al lui Nicolae Steinhardt despre suferință, libertate interioară și renașterea prin credință.",
+    "cover": "/covers/jurnalul-fericirii.jpg"
   },
   {
     "id": "timpul-ce-ni-s-a-dat",
@@ -676,8 +1036,8 @@ export const books: Book[] = [
     "author": "Annie Bentoiu",
     "year": "2011",
     "category": "Jurnale, memorii",
-    "buyUrl": "https://humanitas.ro/humanitas/carte/timpul-ce-ni-s-a-dat-2",
-    "description": "În Occident, mi s-a cerut adeseori să indic o carte din care s-ar putea înţelege ce s-a întâmplat în România în timpul comunismului. De fiecare dată, am ridicat din umeri. Nu avem o asemenea carte. Nu...",
+    "buyUrl": "https://humanitas.ro/humanitas/carte/timpul-ce-ni-s-a-dat-3",
+    "description": "Annie Bentoiu (născută în 1927) are de-o viaţă întreagă obiceiul de a-şi nota în agende evenimentele personale şi ale lumii în care trăieşte, şi jurnalul acesta ţinut cu consecvenţă a stat la baza cel...",
     "cover": "/covers/timpul-ce-ni-s-a-dat.jpg"
   },
   {
@@ -686,8 +1046,8 @@ export const books: Book[] = [
     "author": "Matei Calinescu",
     "year": "2016",
     "category": "Jurnale, memorii",
-    "buyUrl": "https://humanitas.ro/humanitas/carte/un-altfel-de-jurnal",
-    "description": "„În genere, trăiesc după principiul (sănătos, în fond) one day at a time. Fiecare zi e (sau nu e) una din ultimele, dar asta nu se simte direct. O trăiesc, voit, ca pe o zi oarecare. Timpul este o exp...",
+    "buyUrl": "https://humanitas.ro/humanitas/carte/un-altfel-de-jurnal-0",
+    "description": "EBOOK > epub / pdf „În genere, trăiesc după principiul (sănătos, în fond) one day at a time. Fiecare zi e (sau nu e) una din ultimele, dar asta nu se simte direct. O trăiesc, voit, ca pe o zi oarecare...",
     "cover": "/covers/un-altfel-de-jurnal.jpg"
   }
-]
+];

@@ -35,15 +35,12 @@ export function MinimalBookSheet({ books }: BookSheetProps) {
 
   return (
     <Sheet>
-      <SheetTrigger asChild>
-        <button
-            type="button"
-            aria-label="Open menu"
-            className="inline-flex items-center justify-center p-2 -ml-2 font-work uppercase tracking-[1px] text-sm text-foreground/80 hover:text-foreground transition-colors cursor-pointer"
-        >
-            <Menu className="w-6 h-6" />
-        </button>
-        </SheetTrigger>
+      <SheetTrigger
+        aria-label="Open menu"
+        className="inline-flex items-center justify-center p-2 -ml-2 font-work uppercase tracking-[1px] text-sm text-foreground/80 hover:text-foreground transition-colors cursor-pointer"
+      >
+        <Menu className="w-6 h-6" />
+      </SheetTrigger>
 
       <SheetContent side="left" className="w-[360px] sm:w-[420px] flex flex-col p-6">
         <SheetHeader className="pb-4 border-b border-border/40">
@@ -98,7 +95,7 @@ export function MinimalBookSheet({ books }: BookSheetProps) {
                     {/* Small Thumbnail Cover */}
                     <div className="relative w-8 h-12 flex-shrink-0 overflow-hidden rounded bg-neutral-800">
                       <Image
-                        src={`/humanitas-101-titles-that-made-us-humans${book.cover}`}
+                        src={book.cover || "/placeholder.svg"}
                         alt={book.title}
                         fill
                         sizes="32px"

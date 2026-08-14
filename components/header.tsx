@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 import { Search } from 'lucide-react'
 import { MinimalBookSheet } from "@/components/minimal-book-sheet";
@@ -19,9 +20,11 @@ export function Header() {
         {/* CENTER ZONE: Logo */}
         <div className="flex justify-center">
           <Link href="/" className="flex items-center mt-1">
-            <img 
-              src="/humanitas-101-titles-that-made-us-humans/logo-grupul-humanitas.svg"
+            <Image 
+              src="/logo-grupul-humanitas.svg"
               alt="Logo Grupul Humanitas" 
+              width={160}
+              height={40}
               className="h-7 md:h-10 w-auto invert transition-all translate-y-[2px]"
             />
           </Link>
