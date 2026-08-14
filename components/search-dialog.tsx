@@ -99,8 +99,8 @@ export function SearchDialog({ books, trigger }: SearchDialogProps) {
           {/* Main Search Bar Header */}
           <div className="relative mx-auto w-full max-w-full px-6 md:px-10 pt-6 pb-6">
             
-            {/* Close Button in top right corner */}
-            <div className="absolute right-6 md:right-10 top-6">
+            {/* Close Button in top right corner - hidden on mobile */}
+            <div className="absolute right-6 md:right-10 top-6 hidden sm:block">
               <Dialog.Close
                 render={
                   <button
@@ -116,7 +116,7 @@ export function SearchDialog({ books, trigger }: SearchDialogProps) {
             </div>
 
             {/* Centered Search form and subtitle */}
-            <form onSubmit={handleSubmit} className="mx-auto flex flex-col items-center justify-center max-w-2xl px-12 text-center">
+            <form onSubmit={handleSubmit} className="mx-auto flex flex-col items-center justify-center max-w-2xl px-4 sm:px-12 text-center">
               <div className="relative w-full flex items-center justify-center">
                 <input
                   ref={inputRef}
@@ -124,7 +124,7 @@ export function SearchDialog({ books, trigger }: SearchDialogProps) {
                   value={query}
                   onChange={(e) => setQuery(e.target.value)}
                   placeholder="Introdu cuvinte-cheie"
-                  className="w-full bg-transparent font-serif text-2xl sm:text-3xl md:text-4xl text-foreground placeholder:text-foreground/40 outline-none border-none p-0 text-center slow-caret"
+                  className="w-full bg-transparent font-serif text-lg sm:text-2xl md:text-3xl lg:text-4xl text-foreground placeholder:text-foreground/40 outline-none border-none p-0 text-center slow-caret"
                 />
                 {query && (
                   <button
@@ -139,7 +139,7 @@ export function SearchDialog({ books, trigger }: SearchDialogProps) {
               </div>
 
               {/* Subtitle */}
-              <p className="mt-2.5 font-work uppercase tracking-[1px] text-xs text-foreground/50 text-center select-none">
+              <p className="mt-2 font-work uppercase tracking-[1px] text-[11px] sm:text-xs text-foreground/50 text-center select-none">
                 Apasă tasta Enter
               </p>
             </form>
