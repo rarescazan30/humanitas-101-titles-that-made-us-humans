@@ -77,7 +77,7 @@ export const books: Book[] = [
     "year": "2014",
     "category": "Nodurile Civilizației occidentale",
     "buyUrl": "https://humanitas.ro/humanitas/carte/clinamen-0",
-    "description": "EBOOK – EPUB / PDF National Book Award, Pulitzer Prize Dicţionarul latin prezintă lapidar: „clīnāmen, minis n. înclinaţie“. Sub această definiţie exiguă se ascunde o întreagă istorie, termenul fiind u...",
+    "description": "Dicţionarul latin prezintă lapidar: „clīnāmen, minis n. înclinaţie“. Sub această definiţie exiguă se ascunde o întreagă istorie, termenul fiind u...",
     "cover": "/covers/clinamen-cum-a-inceput-renasterea.jpg"
   },
   {
@@ -257,7 +257,7 @@ export const books: Book[] = [
     "year": "2013",
     "category": "Cărți pentru noptieră",
     "buyUrl": "https://humanitas.ro/humanitas/carte/cele-mai-frumoase-povestiri-din-biblie-0",
-    "description": "EBOOK – EPUB / PDF „În vremurile de azi, o carte ca aceasta e mai mult decît binevenită. Ritmul în care trăim, configuraţia fiecărei zile (din care răgazurile, perioadele de «otium» fertil sunt, pract...",
+    "description": "„În vremurile de azi, o carte ca aceasta e mai mult decît binevenită. Ritmul în care trăim, configuraţia fiecărei zile (din care răgazurile, perioadele de «otium» fertil sunt, pract...",
     "cover": "/covers/cele-mai-frumoase-povestiri-din-biblie.jpg"
   },
   {
@@ -307,7 +307,7 @@ export const books: Book[] = [
     "year": "2016",
     "category": "Cărți pentru noptieră",
     "buyUrl": "https://humanitas.ro/humanitas/carte/caiete-0",
-    "description": "EBOOK – EPUB / PDF „Operă de moralist? Literatură? Filozofie? Poate că cel mai corect ar fi să numim paginile Caietelor lui Cioran jurnalul condiţiei umane. Nimeni n-a vorbit cu atâta sinceritate, cu...",
+    "description": "„Operă de moralist? Literatură? Filozofie? Poate că cel mai corect ar fi să numim paginile Caietelor lui Cioran jurnalul condiţiei umane. Nimeni n-a vorbit cu atâta sinceritate, cu...",
     "cover": "/covers/caiete.jpg"
   },
   {
@@ -317,7 +317,7 @@ export const books: Book[] = [
     "year": "2010",
     "category": "Cele mai frumoase nuvele ale lumii",
     "buyUrl": "https://humanitas.ro/humanitas/carte/moartea-lui-ivan-ilici-1",
-    "description": "EBOOK – EPUB / PDF Într-o zi, Ivan Ilici înţelege că e muritor. A învăţat asta şi la şcoală: oamenii sunt muritori, Caius este om, deci Caius este muritor. Omul în general trebuie să moară. El însă nu...",
+    "description": "Într-o zi, Ivan Ilici înţelege că e muritor. A învăţat asta şi la şcoală: oamenii sunt muritori, Caius este om, deci Caius este muritor. Omul în general trebuie să moară. El însă nu...",
     "cover": "/covers/moartea-lui-ivan-ilici.jpg"
   },
   {
@@ -367,7 +367,7 @@ export const books: Book[] = [
     "year": "2012",
     "category": "Cele mai frumoase nuvele ale lumii",
     "buyUrl": "https://humanitas.ro/humanitas/carte/rashomon-0",
-    "description": "EBOOK – EPUB / PDF O noapte cu întâmplări sinistre sub vechea poartă Rashomon. O crimă relatată de martori care se contrazic între ei şi-şi asumă, fiecare pe cont propriu, fărădelegea. O vizită care-ş...",
+    "description": "O noapte cu întâmplări sinistre sub vechea poartă Rashomon. O crimă relatată de martori care se contrazic între ei şi-şi asumă, fiecare pe cont propriu, fărădelegea. O vizită care-ş...",
     "cover": "/covers/rashomon.jpg"
   },
   {
@@ -387,7 +387,7 @@ export const books: Book[] = [
     "year": "2013",
     "category": "Cele mai frumoase nuvele ale lumii",
     "buyUrl": "https://humanitas.ro/humanitas/carte/remember",
-    "description": "EBOOK – EPUB „Şapte ani, o poveste, o întâmplare ciudată sau poate doar un vis... Se-ntâmplă la Berlin în 1907. Se leagă o prietenie stranie iar de aici, o mulţime de întrebări se ivesc. Despre priete...",
+    "description": "„Şapte ani, o poveste, o întâmplare ciudată sau poate doar un vis... Se-ntâmplă la Berlin în 1907. Se leagă o prietenie stranie iar de aici, o mulţime de întrebări se ivesc. Despre priete...",
     "cover": "/covers/remember.jpg"
   },
   {
@@ -537,7 +537,7 @@ export const books: Book[] = [
     "year": "2014",
     "category": "Mari cărți / eseuri",
     "buyUrl": "https://humanitas.ro/humanitas/carte/despre-libertate-3",
-    "description": "EBOOK GRATUIT / PDF > DESCARCĂ „Mill reprezintă în lumea anglo-americană ceea ce este Nietzsche pentru tradiţia continental-europeană: apogeul «modernităţii». Nu este de mirare că eseul Despre liberta...",
+    "description": "„Mill reprezintă în lumea anglo-americană ceea ce este Nietzsche pentru tradiţia continental-europeană: apogeul «modernităţii». Nu este de mirare că eseul Despre liberta...",
     "cover": "/covers/despre-libertate.jpg"
   },
   {
@@ -677,7 +677,7 @@ export const books: Book[] = [
     "year": "2014",
     "category": "Mari cărți / eseuri",
     "buyUrl": "https://humanitas.ro/humanitas/carte/in-castelul-lui-barba-albastra-0",
-    "description": "EBOOK – EPUB / PDF „Multă vreme am crezut că progresul moralei însoţeşte dezvoltarea culturii. Nazismul, arată George Steiner, a pulverizat această iluzie. Buchenwald se află la doar câţiva kilometri...",
+    "description": "„Multă vreme am crezut că progresul moralei însoţeşte dezvoltarea culturii. Nazismul, arată George Steiner, a pulverizat această iluzie. Buchenwald se află la doar câţiva kilometri...",
     "cover": "/covers/in-castelul-lui-barba-albastra.jpg"
   },
   {
@@ -717,7 +717,7 @@ export const books: Book[] = [
     "year": "2018",
     "category": "Mari cărți / eseuri",
     "buyUrl": "https://humanitas.ro/humanitas/carte/sensul-existentei-umane-0",
-    "description": "EBOOK – EPUB / PDF Traducere de Elena Drăgușin-Richard Explorator neobosit al lumii vii, creator al unor noi discipline şi al unor concepte fundamentale în ştiinţele biologice, Edward O. Wilson îşi pu...",
+    "description": "Explorator neobosit al lumii vii, creator al unor noi discipline şi al unor concepte fundamentale în ştiinţele biologice, Edward O. Wilson îşi pu...",
     "cover": "/covers/sensul-existentei-umane.jpg"
   },
   {
@@ -797,7 +797,7 @@ export const books: Book[] = [
     "year": "2016",
     "category": "Niște filozofi lizibili",
     "buyUrl": "https://humanitas.ro/humanitas/carte/fragmentele-stoicilor-vechi-0",
-    "description": "EBOOK – EPUB / PDF „Publicând prezenta ediţie bilingvă ne propunem să facem accesibil cercetătorilor filozofiei antice, studenţilor şi publicului român interesat de filozofie unul dintre cele mai valo...",
+    "description": "„Publicând prezenta ediţie bilingvă ne propunem să facem accesibil cercetătorilor filozofiei antice, studenţilor şi publicului român interesat de filozofie unul dintre cele mai valo...",
     "cover": "/covers/fragmentele-presocraticilor.jpg"
   },
   {
@@ -877,7 +877,7 @@ export const books: Book[] = [
     "year": "2012",
     "category": "Niște filozofi lizibili",
     "buyUrl": "https://humanitas.ro/humanitas/carte/lumea-ca-voinţă-şi-reprezentare-vol-i-şi-ii",
-    "description": "EBOOK – EPUB / PDF „Viaţa este o afacere care nu-şi acoperă costurile.\" (Arthur SCHOPENHAUER) „Dacă ceea ce spune Schopenhauer nu va fi niciodată uitat, asta ţine probabil de faptul că ceea ce el spun...",
+    "description": "„Viaţa este o afacere care nu-şi acoperă costurile.\" (Arthur SCHOPENHAUER) „Dacă ceea ce spune Schopenhauer nu va fi niciodată uitat, asta ţine probabil de faptul că ceea ce el spun...",
     "cover": "/covers/lumea-ca-vointa-si-reprezentare.jpg"
   },
   {
@@ -917,7 +917,7 @@ export const books: Book[] = [
     "year": "2013",
     "category": "Niște filozofi lizibili",
     "buyUrl": "https://humanitas.ro/humanitas/carte/ecce-homo-0",
-    "description": "EBOOK GRATUIT / PDF > DESCARCĂ „Îmi cunosc soarta. Cândva se va lega de numele meu amintirea a ceva monstruos – a unei crize cum nu a mai existat pe pământ, a celei mai profunde ciocniri de conştiinţe...",
+    "description": "„Îmi cunosc soarta. Cândva se va lega de numele meu amintirea a ceva monstruos – a unei crize cum nu a mai existat pe pământ, a celei mai profunde ciocniri de conştiinţe...",
     "cover": "/covers/ecce-homo.jpg"
   },
   {
@@ -987,7 +987,7 @@ export const books: Book[] = [
     "year": "2015",
     "category": "Jurnale, memorii",
     "buyUrl": "https://humanitas.ro/humanitas/carte/amintiri-vise-reflectii-3",
-    "description": "EBOOK > epub / pdf Cartea autobiografica a lui Jung – una dintre cele mai tulburătoare piese memorialistice ale secolului XX – este săracă în fapte de viaţă exterioară: schiţa copilăriei într-o famili...",
+    "description": "Cartea autobiografica a lui Jung – una dintre cele mai tulburătoare piese memorialistice ale secolului XX – este săracă în fapte de viaţă exterioară: schiţa copilăriei într-o famili...",
     "cover": "/covers/amintiri-vise-reflectii.jpg"
   },
   {
@@ -1007,7 +1007,7 @@ export const books: Book[] = [
     "year": "2018",
     "category": "Jurnale, memorii",
     "buyUrl": "https://humanitas.ro/humanitas/carte/jurnalul-unei-epoci-1935–1936-0",
-    "description": "EBOOK > epub / pdf Traducere de Emanoil Marcu și Vlad Russo În 1935-1936, Denis de Rougemont acceptă un post de lector de literatură franceză la Frankfurt, nu în ultimul rând din dorința de a fi marto...",
+    "description": "În 1935-1936, Denis de Rougemont acceptă un post de lector de literatură franceză la Frankfurt, nu în ultimul rând din dorința de a fi marto...",
     "cover": "/covers/jurnalul-unei-epoci.jpg"
   },
   {
@@ -1047,7 +1047,7 @@ export const books: Book[] = [
     "year": "2016",
     "category": "Jurnale, memorii",
     "buyUrl": "https://humanitas.ro/humanitas/carte/un-altfel-de-jurnal-0",
-    "description": "EBOOK > epub / pdf „În genere, trăiesc după principiul (sănătos, în fond) one day at a time. Fiecare zi e (sau nu e) una din ultimele, dar asta nu se simte direct. O trăiesc, voit, ca pe o zi oarecare...",
+    "description": "„În genere, trăiesc după principiul (sănătos, în fond) one day at a time. Fiecare zi e (sau nu e) una din ultimele, dar asta nu se simte direct. O trăiesc, voit, ca pe o zi oarecare...",
     "cover": "/covers/un-altfel-de-jurnal.jpg"
   }
 ];
