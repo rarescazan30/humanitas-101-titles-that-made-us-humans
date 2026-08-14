@@ -166,3 +166,18 @@
     @apply bg-background text-foreground;
   }
 }
+
+@keyframes slowCaretBlink {
+  0%, 100% {
+    caret-color: currentColor;
+  }
+  50% {
+    caret-color: transparent;
+  }
+}
+
+.slow-caret {
+  animation: slowCaretBlink 1.8s ease-in-out infinite;
+  caret-color: currentColor;
+}
+

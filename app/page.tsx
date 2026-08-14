@@ -1,18 +1,9 @@
-import { BookCard } from '@/components/book-card'
+import { Suspense } from 'react'
 import { Header } from '@/components/header'
+import { BooksCatalog } from '@/components/books-catalog'
 import { books } from '@/lib/books'
 
 export default function Page() {
-  // Group books dynamically by category while preserving insertion order
-  const booksByCategory = books.reduce((acc, book) => {
-    const category = book.category || 'Altele'
-    if (!acc[category]) {
-      acc[category] = []
-    }
-    acc[category].push(book)
-    return acc
-  }, {} as Record<string, typeof books>)
-
   return (
     <main className="min-h-screen bg-background">
       <Header />
@@ -22,8 +13,8 @@ export default function Page() {
           <p className="text-sm uppercase tracking-[0.35em] text-primary">
             Librăriile Humanitas
           </p>
-          <h1 className="mt-6 h-20 max-w-4xl text-balance font-serif text-4xl leading-[1.1] text-foreground md:text-6xl">
-            Cărțile care ne-au făcut oameni
+          <h1 className="mt-6 max-w-4xl font-serif text-4xl leading-[1.1] text-foreground md:text-6xl">
+            Cărțile care <span className="whitespace-nowrap">ne-au</span> făcut oameni
           </h1>
           <div className="mt-8 max-w-3xl space-y-4 text-lg leading-relaxed text-foreground/80">
             <p className="text-pretty">
@@ -37,30 +28,10 @@ export default function Page() {
           </div>
         </header>
 
-        {/* Categories Sections */}
-        <div id="lista" className="mt-16 space-y-20">
-          {Object.entries(booksByCategory).map(([category, categoryBooks]) => (
-            <section
-              key={category}
-              aria-label={category}
-              className="scroll-mt-24 space-y-8"
-            >
-              {/* Category Subtitle */}
-              <div className="border-b border-border/60 pb-4">
-                <h2 className="font-work uppercase tracking-[1.5px] text-sm md:text-base font-semibold text-primary">
-                  {category}
-                </h2>
-              </div>
-
-              {/* Grid */}
-              <div className="grid grid-cols-1 gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
-                {categoryBooks.map((book) => (
-                  <BookCard key={book.id} book={book} />
-                ))}
-              </div>
-            </section>
-          ))}
-        </div>
+        {/* Books Catalog & Categories with URL Query Filtering */}
+        <Suspense fallback={<div className="py-20 text-center text-muted-foreground">Se încarcă catalogul...</div>}>
+          <BooksCatalog initialBooks={books} />
+        </Suspense>
 
         {/* Footer note */}
         <footer className="mt-24 border-t border-border pt-8">

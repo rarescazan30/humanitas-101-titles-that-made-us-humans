@@ -14,7 +14,7 @@ export const books: Book[] = [
     "id": "epopeea-lui-ghilgamesh",
     "category": "Nodurile Civilizației occidentale",
     "title": "Epopeea lui Ghilgameș",
-    "author": "Anonim",
+    "author": "",
     "year": "Secolul XVIII î.Hr.",
     "buyUrl": "https://www.libris.ro/carte/epopeea-lui-ghilgames-ed-2014/861787",
     "description": "Cea mai veche operă literară a umanității, epopeea mesopotamiană narează căutarea nemuririi de către regele Ghilgameș din Uruk și prietenia sa legendară cu Enkidu.",
@@ -253,7 +253,7 @@ export const books: Book[] = [
   {
     "id": "cele-mai-frumoase-povestiri-din-biblie",
     "title": "Cele mai frumoase povestiri din Biblie",
-    "author": "***",
+    "author": "",
     "year": "2013",
     "category": "Cărți pentru noptieră",
     "buyUrl": "https://humanitas.ro/humanitas/carte/cele-mai-frumoase-povestiri-din-biblie-0",

@@ -50,6 +50,8 @@ export const viewport: Viewport = {
   themeColor: '#FAFAFA',
 }
 
+import { ReadBooksProvider } from '@/lib/read-books-context'
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -58,7 +60,9 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${playfair.variable} ${sourceSerif.variable} ${workSans.variable} bg-background`}>
       <body className="font-sans antialiased">
-        {children}
+        <ReadBooksProvider>
+          {children}
+        </ReadBooksProvider>
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>

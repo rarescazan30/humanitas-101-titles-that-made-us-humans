@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import { Search } from 'lucide-react'
 import { MinimalBookSheet } from "@/components/minimal-book-sheet";
+import { SearchDialog } from "@/components/search-dialog";
 import { books } from "@/lib/books";
 
 export function Header() {
@@ -9,12 +9,28 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-md">
       <nav className="mx-auto flex h-22 max-w-full items-center justify-between px-6 md:px-10">
         
-        {/* LEFT ZONE: ALWAYS VISIBLE ON MOBILE */}
-        <div className="flex flex-1 items-center gap-6">
+        {/* LEFT ZONE: MENU & NAV LINKS */}
+        <div className="flex flex-1 items-center gap-6 md:gap-8">
           
-          {/* Your sheet component */}
+          {/* Hamburger Sheet Component */}
           <MinimalBookSheet books={books} />
           
+          {/* Navigation Links */}
+          <div className="hidden sm:flex items-center gap-6">
+            <Link 
+              href="/cuvant-despre-lista" 
+              className="font-work uppercase tracking-[1px] text-sm text-foreground/80 hover:text-foreground transition-colors"
+            >
+              Cuvânt despre listă
+            </Link>
+            <Link 
+              href="/" 
+              className="font-work uppercase tracking-[1px] text-sm text-foreground/80 hover:text-foreground transition-colors"
+            >
+              Lista
+            </Link>
+          </div>
+
         </div>
 
         {/* CENTER ZONE: Logo */}
@@ -30,13 +46,9 @@ export function Header() {
           </Link>
         </div>
 
-        {/* RIGHT ZONE */}
+        {/* RIGHT ZONE: SEARCH */}
         <div className="flex flex-1 items-center justify-end gap-6">
-          <button className="flex items-center gap-4 font-work uppercase tracking-[1px] text-sm text-foreground/80 hover:text-foreground transition-colors">
-            {/* The word "Caută" is hidden on mobile here, but the icon shows! */}
-            <span className="hidden sm:inline">Caută</span>
-            <Search className="h-5 w-5" />
-          </button>
+          <SearchDialog books={books} />
         </div>
 
       </nav>

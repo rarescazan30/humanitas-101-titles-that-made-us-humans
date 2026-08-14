@@ -1,3 +1,6 @@
+"use client";
+
+import * as React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { Menu } from "lucide-react";
@@ -23,6 +26,8 @@ interface BookSheetProps {
 }
 
 export function MinimalBookSheet({ books }: BookSheetProps) {
+  const [open, setOpen] = React.useState(false);
+
   // 1. Group books dynamically by their category
   const booksByCategory = books.reduce((acc, book) => {
     const category = book.category || "Altele";
@@ -33,8 +38,12 @@ export function MinimalBookSheet({ books }: BookSheetProps) {
     return acc;
   }, {} as Record<string, Book[]>);
 
+  const handleClose = () => {
+    setOpen(false);
+  };
+
   return (
-    <Sheet>
+    <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger
         aria-label="Open menu"
         className="inline-flex items-center justify-center p-2 -ml-2 font-work uppercase tracking-[1px] text-sm text-foreground/80 hover:text-foreground transition-colors cursor-pointer"
@@ -49,16 +58,18 @@ export function MinimalBookSheet({ books }: BookSheetProps) {
           </SheetTitle>
         </SheetHeader>
 
-        {/* Navigation Links moved here */}
+        {/* Navigation Links */}
         <div className="flex flex-col gap-5 py-6 border-b border-border/40">
           <Link 
-            href="#cuvant" 
+            href="/cuvant-despre-lista" 
+            onClick={handleClose}
             className="font-work uppercase tracking-[1px] text-sm text-foreground/80 hover:text-foreground transition-colors"
           >
             Cuvânt despre listă
           </Link>
           <Link 
-            href="#lista" 
+            href="/" 
+            onClick={handleClose}
             className="font-work uppercase tracking-[1px] text-sm text-foreground/80 hover:text-foreground transition-colors"
           >
             Lista
@@ -67,6 +78,7 @@ export function MinimalBookSheet({ books }: BookSheetProps) {
             href="https://humanitas.ro" 
             target="_blank" 
             rel="noopener noreferrer"
+            onClick={handleClose}
             className="font-work uppercase tracking-[1px] text-sm text-foreground/80 hover:text-foreground transition-colors"
           >
             Librăriile Humanitas
@@ -90,6 +102,7 @@ export function MinimalBookSheet({ books }: BookSheetProps) {
                     href={book.buyUrl || '#'}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={handleClose}
                     className="flex items-center gap-3 p-1.5 rounded-md hover:bg-white/5 transition-colors group cursor-pointer block"
                   >
                     {/* Small Thumbnail Cover */}
@@ -108,7 +121,7 @@ export function MinimalBookSheet({ books }: BookSheetProps) {
                       <h4 className="text-sm max-w-3xl leading-snug text-foreground/80 truncate group-hover:text-foreground transition-colors">
                         {book.title}
                       </h4>
-                      {book.author && (
+                      {book.author && book.author.trim() !== "" && !book.author.includes("*") && book.author.toLowerCase() !== "anonim" && (
                         <p className="text-[11px] text-neutral-400 truncate mt-0.5">
                           {book.author}
                         </p>
